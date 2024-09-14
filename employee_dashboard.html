@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 80px; 
+        }
+
+      
+        nav {
+            background-color: grey;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+      
+        .logout {
+            color: white;
+            background-color: grey;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .logout:hover {
+            background-color: black;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 50px; 
+        }
+
+        .profile-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out; 
+            cursor: pointer; 
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid black;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .profile-card .label {
+            font-weight: bold;
+            color: black;
+        }
+
+        .profile-card .details {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 14px;
+            margin-top: auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">
+           
+           Infinity
+        </a>
+        <a href="index.html" class="logout">Logout</a>
+    </nav>
+
+    <div class="dashboard-container">
+   
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://cdn2.vectorstock.com/i/1000x1000/26/06/young-executive-woman-profile-icon-vector-9692606.jpg" alt="Employee Photo">
+            <h2>Aditi</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span> Indian</p>
+                <p><span class="label">Attendance:</span> 95%</p>
+                <p><span class="label">Skills:</span>Back-end, Front-end</p>
+                <p><span class="label">Phone-no.:</span>9779xxxx78</p>
+            </div>
+        </div>
+
+  
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://th.bing.com/th?id=OIP.SJcycEiCnXZ6_AePYM_EZQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Employee Photo">
+            <h2>Aaryaman</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span>Indian</p>
+                <p><span class="label">Attendance:</span> 90%</p>
+                <p><span class="label">Skills:</span>Back-end, Front-end</p>
+                <p><span class="label">Phone-no.:</span>99xxxxxx65</p>
+            </div>
+        </div>
+
+ 
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://th.bing.com/th/id/OIP.PjHPWnfJvLu9QvnzbwvO-gHaH_?w=188&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Employee Photo">
+            <h2>Aaradhya</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span>Nigerian</p>
+                <p><span class="label">Attendance:</span> 92%</p>
+                <p><span class="label">Skills:</span>Media</p>
+                <p><span class="label">Phone-no.:</span>67xxxxxx89</p>
+            </div>
+        </div>
+
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://th.bing.com/th/id/OIP.Rsee9JOACZbVg35UCEYmWwHaH_?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Employee Photo">
+            <h2>Abhishek</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span>Indian</p>
+                <p><span class="label">Attendance:</span> 88%</p>
+                <p><span class="label">Skills:</span>DevOps Engineer</p>
+                <p><span class="label">Phone-no.:</span>98xxxxxxx23</p>
+            </div>
+        </div>
+
+      
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://th.bing.com/th?id=OIP.28jmE4s4hgzuaJnqvGffRQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Employee Photo">
+            <h2>Mohit</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span> Indian</p>
+                <p><span class="label">Attendance:</span> 97%</p>
+                <p><span class="label">Skills:</span>Front-end</p>
+                <p><span class="label">Phone-no.:</span>98xxxxxx68</p>
+            </div>
+        </div>
+
+  
+        <div class="profile-card" onclick="window.location.href='profile.html'">
+            <img src="https://th.bing.com/th/id/OIP.vfUtirjQYRe7uKkKEWA7OQHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Employee Photo">
+            <h2>Jay</h2>
+            <div class="details">
+                <p><span class="label">Nationality:</span>Pakistani</p>
+                <p><span class="label">Attendance:</span> 93%</p>
+                <p><span class="label">Skills:</span>Cloud Engineer</p>
+                <p><span class="label">Phone-no.:</span>96xxxxxx23</p>
+            </div>
+        </div>
+    </div>
+
+ 
+    <footer>
+        &copy; 2024 Infinity. All rights reserved.
+    </footer>
+
+</body>
+</html>

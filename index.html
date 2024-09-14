@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Infinity</title>
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            background-image:url('image1.jpeg');
+            background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+     
+        nav {
+            background-color:black;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; 
+        }
+
+       
+        .container {
+            width: 500px; 
+            background-color: black;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputBox input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .inputBox input:focus {
+            border-color: black;
+        }
+
+        .inputBox label {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            padding: 0 5px;
+            font-size: 14px;
+            color: black;
+            pointer-events: none;
+            transition: 0.3s;
+            background: #fff;
+        }
+
+        .inputBox input:focus ~ label,
+        .inputBox input:not(:placeholder-shown) ~ label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color:black;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: grey;
+            color: black;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-text a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   
+    <nav>
+        <a href="#" class="logo">
+            <img src="image2.png" alt="Company Logo">
+          Infinity
+        </a>
+    </nav>
+
+    <div class="main-container">
+      
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="inputBox">
+                    <input type="text" id="username" placeholder=" " required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="footer-text">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2024 infinity. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+         
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+         
+            const adminCredentials = {
+                username: 'admin',
+                password: 'admin'
+            };
+
+            const employeeCredentials = {
+                username: 'employee',
+                password: 'employee'
+            };
+
+          
+            if (username === adminCredentials.username && password === adminCredentials.password) {
+                alert('Admin logged in!');
+                window.location.href = 'extra.html'; 
+            }
+          
+            else if (username === employeeCredentials.username && password === employeeCredentials.password) {
+                alert('Employee logged in!');
+                window.location.href = 'emdashboard.html'; 
+            }
+           
+            else {
+                alert('Invalid username or password!');
+            }
+        });
+    </script>
+</body>
+</html>
